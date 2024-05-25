@@ -1,0 +1,148 @@
+@font-face {
+    font-family: AndaleMono;
+    src: url(../font/ANDALEBMO.TTF);
+}
+
+* {
+    font-family: AndaleMono;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.header__contenedor,
+header,
+aside {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .header__contenedor */
+
+.header__contenedor {
+    max-width: 35%;
+}
+
+.header__contenedor h1 {
+    font-size: clamp(4rem, 0.316rem + 18.421vw, 18rem);
+    line-height: .80;
+    letter-spacing: -10px;
+    overflow: hidden;
+    word-spacing: -2rem;
+}
+
+/* aside */
+
+aside {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.cards {
+    max-width: 80%;
+    min-width: 50%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    max-width: 650px;
+    display: flex;
+}
+
+.card a {
+    height: 220px;
+    text-decoration: none;
+    display: flex;
+    align-items: self-end;
+    width: 100%;
+}
+
+.card a:hover img {
+    transform: scale(1.05);
+}
+
+
+.card .card__img {
+    width: clamp(15.625rem, 13.651rem + 9.868vw, 23.125rem);
+    min-width: 200px;
+}
+
+.card .card__img img {
+    object-fit: cover;
+    height: clamp(10.625rem, 9.803rem + 4.112vw, 13.75rem);
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.card h2 {
+    margin-left: 1rem;
+    font-size: clamp(1.5rem, 1.105rem + 1.974vw, 3rem);
+    color: black;
+}
+
+.card h2 span {
+    display: flex;
+}
+
+/* MEDIA QUERY*/
+
+@media screen and (max-width: 768px) {
+    .header__contenedor {
+        max-width: 90%;
+        margin: 0 1rem;
+    }
+
+    .header__contenedor h1 {
+        overflow: visible;
+        margin: 4rem 0;
+        word-spacing: -10rem;
+    }
+
+    aside {
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    .cards {
+        max-width: 100%;
+        gap: 4rem;
+    }
+
+    .card a {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card h2 {
+        display: inline-block;
+    }
+
+    .card .card__img {
+        display: inline;
+        width: 100%;
+    }
+
+    .card h2 span {
+        display: inline;
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: AndaleMono;
+    src: url(../font/ANDALEBMO.TTF);
+}
+
+* {
+    font-family: AndaleMono;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+header,
+main {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: clamp(4rem, 1.5rem + 12.5vw, 13.5rem);
+    letter-spacing: -10px;
+    line-height: 1;
+}
+
+header span {
+    margin-left: clamp(1rem, 0.211rem + 3.947vw, 4rem);
+    font-size: clamp(1.69rem, 0.029rem + 8.303vw, 8rem);
+}
+
+header p {
+    display: inline;
+    line-height: 1.5;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    font-size: clamp(1rem, 0.5rem + 2.5vw, 2.9rem);
+}
+
+/* MAIN */
+
+section.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.cards .card {
+    box-sizing: border-box;
+    padding: .5rem;
+    min-width: 200px;
+    max-width: 500px;
+    transition: transform .2s ease-in;
+}
+
+.card h2 {
+    box-sizing: border-box;
+    padding: 1rem;
+    font-size: clamp(0.9rem, 0.768rem + 0.658vw, 1.4rem);
+    color: #fff;
+    background-color: #000;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: AndaleMono;
+    src: url(../font/ANDALEBMO.TTF);
+}
+
+* {
+    font-family: AndaleMono;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+header,
+main,
+section {
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 1;
+    min-height: 100vh;
+}
+
+header .header__intro {
+    width: 70%;
+    letter-spacing: clamp(-0.2rem, -0.121rem + -0.395vw, -0.5rem);
+    word-spacing: clamp(0rem, 0.526rem + -2.632vw, -2rem);
+    font-size: clamp(2rem, 0.421rem + 7.895vw, 8rem);
+}
+
+header section {
+    padding: clamp(1rem, 0.737rem + 1.316vw, 2rem);
+    line-height: 1.2;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    width: 60%;
+}
+
+header section p {
+    width: 80%;
+    font-size: clamp(1rem, 0.474rem + 2.632vw, 3rem);
+}
+
+header section span {
+    right: 0;
+    top: 3rem;
+    position: absolute;
+    font-size: clamp(1.5rem, -0.211rem + 8.553vw, 8rem);
+}
+
+header h1 {
+    font-size: clamp(3.5rem, 0.474rem + 15.132vw, 15rem);
+}
+
+
+/* MAIN */
+main {
+    width: 100%;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards .card {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards .card .card__img {
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 450px;
+}
+
+.cards .card .card__img img {
+    width: 100%;
+}
+
+.card .card__info {
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 680px;
+    line-height: 1;
+    padding: 2rem;
+    width: 60%;
+}
+
+.card .card__info h2 {
+    font-size: clamp(2.5rem, 0.789rem + 8.553vw, 9rem);
+    letter-spacing: clamp(-0.313rem, -0.23rem + -0.411vw, -0.625rem);
+    text-transform: uppercase;
+}
+
+.card .card__info details {
+    letter-spacing: -1.5px;
+    font-size: clamp(0.8rem, 0.668rem + 0.658vw, 1.3rem);
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.card .card__info details summary {
+    margin: 1rem 0;
+    font-size: clamp(1.3rem, 0.958rem + 1.711vw, 2.6rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card__info details summary span {
+    font-size: clamp(1.3rem, 0.326rem + 4.868vw, 5rem);
+    transition: transform 0.5s ease;
+}
+
+details[open] summary span {
+    transform: rotate(90deg);
+}
+
+
+@media screen and (max-width: 480px) {
+    header section p {
+        width: 100%;
+    }
+    header .header__intro {
+        text-align: center;
+        width: 80%;
+    }
+}

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: AndaleMono;
+    src: url(../font/ANDALEBMO.TTF);
+}
+
+* {
+    font-family: AndaleMono;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+header,
+main {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../img/INICIO/inicioimg.jpg);
+}
+
+header h1,
+header h2,
+main h2 {
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    align-items: baseline;
+    font-size: clamp(4rem, 1.046rem + 12.057vw, 12.5rem);
+}
+
+h2 {
+    flex-wrap: wrap;
+}
+
+h1 span,
+h2 span {
+    font-size: clamp(1.69rem, 0.435rem + 5.121vw, 5.3rem);
+}
+
+header p {
+    width: 70%;
+    text-wrap: pretty;
+}
+
+p span {
+    font-size: 1.2rem;
+}
+
+/* MAIN */
+
+main {
+    margin-top: 5rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section.cards {
+    margin-top: 5rem;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
+section .card {
+    margin-bottom: -2rem;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: 200px;
+}
+
+section .card__imagen {
+    height: 280px;
+}
+
+section .card__imagen img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+section .card__imagen:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+section .card h3 {
+    font-size: 1.5rem;
+}
+
+.card h3, .card p.card__sinopsis {
+    background-color: #000;
+    color: #fff;
+}
+
+section .card p {
+    width: 100%;
+    text-wrap: pretty;
+}
+
+section .card .card__sinopsis {
+    position: relative;
+    bottom: 5rem;
+    z-index: 1;
+    opacity: 0;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    padding: 1rem;
+    transition: opacity .3s ease-out;
+}
+
+section .card:hover .card__sinopsis {
+    opacity: 1;
+}
